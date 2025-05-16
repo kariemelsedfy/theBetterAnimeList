@@ -22,6 +22,5 @@ namespace API.Helpers
                 .Replace('/', '_');
         }
 
-
     }
 }

@@ -4,6 +4,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add controllers
 builder.Services.AddControllers();
+builder.Services.AddHttpClient<OAuthService>();
 
 // Add CORS to allow Angular frontend (localhost:4200 during dev)
 builder.Services.AddCors(options =>
