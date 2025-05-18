@@ -38,7 +38,8 @@ namespace API.Controllers
         {
             var tokenResponse = await _oauthService.ExchangeCodeForTokenAsync(code);
             Console.WriteLine(tokenResponse);
-            return Ok(tokenResponse); // or redirect to Angular with token
+
+            return Redirect($"http://localhost:4200/{tokenResponse}") 
         }
     }
 }
