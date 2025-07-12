@@ -36,7 +36,7 @@ router.post('/', async (req, res) => {
             seen.add(anime.id);
             return true;
         });
-
+ف
         // Only return id and main_picture
         const result = uniqueAnime.map(anime => ({
             id: anime.id,

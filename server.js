@@ -5,6 +5,8 @@ const login = require('./routes/login');
 const getToken = require('./routes/getToken')
 const buildSuggestedAnimeList = require('./routes/buildSuggestedAnimeList')
 const bodyParser = require('body-parser');
+const getSuggestedAnimes = require('./routes/getSuggestedAnimes');
+
 app.use(bodyParser.json())
 app.use(express.json())
 app.use(cors());
@@ -17,6 +19,7 @@ app.get('/', (req, res) => {
 app.use('/api/login', login);
 app.use('/api/getToken', getToken);
 app.use('/api/buildSuggestedAnimeList', buildSuggestedAnimeList);
+app.use('/api/getSuggestedAnimes', getSuggestedAnimes);
 
 
 app.listen(3000, () => {
